@@ -1,14 +1,14 @@
 export class Student {
-  id;
-  name;
-  dob;
-  street;
-  street2;
-  city;
-  state;
-  zip;
-  course;
-  asOfDate;
+  id: string;
+  name: string;
+  dob: string;
+  street: string;
+  street2: string;
+  city: string;
+  state: string;
+  zip: string;
+  course: string;
+  asOfDate: string;
 
   constructor(values: Object = {}) {
     Object.assign(this, values);

@@ -25,6 +25,15 @@ export class RestApiService {
             .catch(this.handleError);
   }
 
+  public addStudent(student: Student): Observable<Student> {
+    return this.http
+      .post(API_URI + '/students', student)
+      .map(response => {
+        return new Student(response.json());
+      })
+      .catch(this.handleError);
+  }
+
   private handleError (error: Response | any) {
     console.error('ApiService::handleError', error);
     return Observable.throw(error);

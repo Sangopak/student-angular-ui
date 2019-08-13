@@ -9,9 +9,21 @@ import { RestApiService } from './../rest-api/rest-api.service';
 })
 export class StudentListComponent implements OnInit {
 
-@Input()
-students: Student[];
+//@Input()
+  students: Student[];
 
-constructor ({
+  constructor (
+    private restApiService: RestApiService
+  ){
+  }
+
+  public ngOnInit() {
+    this.restApiService
+      .getAllStudents()
+      .subscribe(
+        (students) => {
+          this.students = students;
+        }
+      );
   }
 }

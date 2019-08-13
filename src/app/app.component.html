@@ -3,10 +3,15 @@
     <div class="col-md-12">
       <div class="card bg-dark my-5">
         <div class="card-body">
-          <h1 class="card-title text-center text-white py-3">{{title}}</h1>
-              <app-student-list [students]="students"></app-student-list>
+          <h3 class="card-title text-center text-white py-3">{{title}}</h3>
+          <ul class="text-center list-inline py-3">
+            <li class="list-inline-item"><a routerLink="/about" class="btn btn-info">About</a></li>
+            <li class="list-inline-item"><a routerLink="/students" class="btn btn-info">List of Students</a></li>
+            <li class="list-inline-item"><a routerLink="/addStudent" class="btn btn-info">Add Student</a></li>
+          </ul>
         </div>
       </div>
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

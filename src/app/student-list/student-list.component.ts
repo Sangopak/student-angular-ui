@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Student } from './../model/student';
 import { RestApiService } from './../rest-api/rest-api.service';
 
@@ -9,21 +9,9 @@ import { RestApiService } from './../rest-api/rest-api.service';
 })
 export class StudentListComponent implements OnInit {
 
-students: Student[] = [];
+@Input()
+students: Student[];
 
-constructor (
-    private restApiService: RestApiService
-  ){
+constructor ({
   }
-
-  public ngOnInit() {
-    this.restApiService
-      .getAllStudents()
-      .subscribe(
-        (students) => {
-          this.students = students;
-        }
-      );
-  }
-
 }

@@ -1,6 +1,6 @@
 <div class="card my-5">
   <div class="card-body">
-      <table class="table table-bordered table-striped">
+      <table class="table table-bordered table-striped" *ngIf="students && students.length">
         <thead class="thead-dark">
           <tr>
             <th scope="col">ID</th>
@@ -12,7 +12,6 @@
             <th scope="col">State</th>
             <th scope="col">Zip</th>
             <th scope="col">Course</th>
-            <th scope="col">Updated By</th>
           </tr>
           </thead>
           <tbody>
@@ -26,7 +25,6 @@
             <td>{{ student.state }}</td>
             <td>{{ student.zip }}</td>
             <td>{{ student.course }}</td>
-            <td>{{ student.asOfDate }}</td>
           </tr>
         </tbody>
       </table>

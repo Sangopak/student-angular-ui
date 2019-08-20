@@ -11,7 +11,7 @@ import { RestApiService } from './../rest-api/rest-api.service';
 })
 export class StudentFormComponent {
 
-  student: Student;
+  student: Student = new Student();
 
   constructor(private route: ActivatedRoute, private router: Router, private restApiService : RestApiService) { }
 

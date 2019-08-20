@@ -8,14 +8,14 @@ import { AppComponent } from './app.component';
 import { RestApiService } from './rest-api/rest-api.service';
 import { StudentListComponent } from './student-list/student-list.component';
 import { StudentFormComponent } from './student-form/student-form.component';
-import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     StudentListComponent,
     StudentFormComponent,
-    AboutComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,

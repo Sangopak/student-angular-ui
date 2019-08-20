@@ -2,16 +2,58 @@
   <div class="card-body">
     <form (ngSubmit)="onSubmit()" #studentForm="ngForm">
       <div class="form-group">
+      <label for="id">Student Id</label>
+      <input type="text" [(ngModel)]="student.id" class="form-control" id="id" name="id" placeholder="Enter the Identifier"
+             required #id="ngModel">
+      <div [hidden]="!id.pristine" class="alert alert-danger">Identifier is required</div>
+    </div>
+      <div class="form-group">
         <label for="name">Name</label>
         <input type="text" [(ngModel)]="student.name" class="form-control" id="name" name="name" placeholder="Enter your name"
                required #name="ngModel">
+        <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
       </div>
-      <div [hidden]="!name.pristine" class="alert alert-danger">Name is required</div>
       <div class="form-group">
         <label for="dob">Date of Birth</label>
         <input type="text" [(ngModel)]="student.dob" class="form-control" id="dob" name="dob" placeholder="Enter your date of birth"
                required #dob="ngModel">
         <div [hidden]="!dob.pristine" class="alert alert-danger">Date of Birth is required</div>
+      </div>
+      <div class="form-group">
+        <label for="street">Street</label>
+        <input type="text" [(ngModel)]="student.street" class="form-control" id="street" name="street" placeholder="Enter your Street"
+               required #street="ngModel">
+        <div [hidden]="!street.pristine" class="alert alert-danger">Street is required</div>
+      </div>
+      <div class="form-group">
+        <label for="street2">Street2</label>
+        <input type="text" [(ngModel)]="student.street2" class="form-control" id="street2" name="street2" placeholder="Enter your Street2"
+               required #street2="ngModel">
+        <div [hidden]="!street2.pristine" class="alert alert-danger">Street2 is required</div>
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input type="text" [(ngModel)]="student.city" class="form-control" id="city" name="city" placeholder="Enter your City"
+               required #city="ngModel">
+        <div [hidden]="!city.pristine" class="alert alert-danger">City is required</div>
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" [(ngModel)]="student.state" class="form-control" id="state" name="state" placeholder="Enter your State"
+               required #state="ngModel">
+        <div [hidden]="!state.pristine" class="alert alert-danger">State is required</div>
+      </div>
+      <div class="form-group">
+        <label for="zip">Zip</label>
+        <input type="text" [(ngModel)]="student.zip" class="form-control" id="zip" name="zip" placeholder="Enter your Zip"
+               required #zip="ngModel">
+        <div [hidden]="!zip.pristine" class="alert alert-danger">Zip is required</div>
+      </div>
+      <div class="form-group">
+        <label for="course">Course</label>
+        <input type="text" [(ngModel)]="student.course" class="form-control" id="course" name="course" placeholder="Enter your Course"
+               required #course="ngModel">
+        <div [hidden]="!course.pristine" class="alert alert-danger">Course is required</div>
       </div>
       <button type="submit" [disabled]="!studentForm.form.valid" class="btn btn-info">Submit</button>
     </form>
